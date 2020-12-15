@@ -28,10 +28,18 @@ const newFriend = document.querySelector("#friend");
 const friendForm = document.querySelector("#newfriend");
 const list = document.querySelector("#friendslist");
 const ul = document.querySelector("ul");
+const carsUl = document.querySelector("#cars");
 
 ul.addEventListener("click", function(e) {
     if (e.target.tagName === 'BUTTON') {
         e.target.parentElement.remove();
+    }
+    else if (e.target.tagName === 'LI') { 
+        console.log(e);
+        e.target.classList.add("best-friend");
+        const heart = document.createElement("span");
+        heart.innerHTML = "&hearts;"
+        e.target.prepend(heart);
     }
 })
 
@@ -45,4 +53,9 @@ friendForm.addEventListener("submit", function(e) {
     newLi.appendChild(newBtn);
     list.appendChild(newLi);
 
+})
+
+carsUl.addEventListener("click", function(e) {
+    console.log(e.target.getAttribute("data-id"));
+    console.log(e.target.dataset);
 })
