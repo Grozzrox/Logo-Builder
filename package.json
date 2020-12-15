@@ -1,0 +1,15 @@
+{
+  "name": "color-selector",
+  "version": "1.0.0",
+  "description": "Logo Creator 9000",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grozzy",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
