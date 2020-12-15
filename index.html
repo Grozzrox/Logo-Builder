@@ -11,24 +11,26 @@
         </h1>
         <p>The easiest way to make great logos!</p>
 
-        <form>
+        <form action="" id="logoform">
             <p>
-                <label for="brandname">
-                    Enter a brand name:
+                <label for="brandname"> Enter a brand name:
                     <input type="text" placeholder="Brand Name" name="brandname">
                 </label>
             </p>
             <p>
-                <label for="brandcolor">
+                <label for="brandcolor"> Select brand color:
                     <input type="color" name="brandcolor">
                 </label>
             </p>
             <p>
-                <label for="fontsize">
-                    <input type="range" name="fontsize">
+                <label for="fontsize"> Select font size:
+                    <input type="range" name="fontsize" min="10" max="200">
                 </label>
             </p>
+            <input type="submit">
         </form>
+
+        <section id="newlogo"></section>
 
         <script src="app.js"></script>
     </body>
