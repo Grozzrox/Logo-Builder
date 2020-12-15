@@ -59,3 +59,9 @@ carsUl.addEventListener("click", function(e) {
     console.log(e.target.getAttribute("data-id"));
     console.log(e.target.dataset);
 })
+
+const colors = document.querySelector("#colors");
+
+colors.addEventListener("click", function(e) {
+    document.body.style.backgroundColor = e.target.dataset.hex;
+})
