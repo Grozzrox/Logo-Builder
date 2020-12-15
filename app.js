@@ -24,11 +24,16 @@ document.addEventListener("keypress", function(e) {
     console.log(e.key);
 });
 
-const friendsList = document.querySelectorAll("li button");
 const newFriend = document.querySelector("#friend");
 const friendForm = document.querySelector("#newfriend");
 const list = document.querySelector("#friendslist");
+const ul = document.querySelector("ul");
 
+ul.addEventListener("click", function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        e.target.parentElement.remove();
+    }
+})
 
 friendForm.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -36,17 +41,8 @@ friendForm.addEventListener("submit", function(e) {
     const newBtn = document.createElement("button");
     newLi.innerText = `${newFriend.value} `;
     newBtn.innerText = "UnFriend"
-    newBtn.addEventListener("click", function(e) {
-        e.target.parentElement.remove();
-    })
     newFriend.value = "";
     newLi.appendChild(newBtn);
     list.appendChild(newLi);
 
 })
-
-for (let friend of friendsList) {
-    friend.addEventListener("click", function(e) {
-        e.target.parentElement.remove();
-    })
-}
