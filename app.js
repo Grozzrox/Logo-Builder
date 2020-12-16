@@ -65,3 +65,21 @@ const colors = document.querySelector("#colors");
 colors.addEventListener("click", function(e) {
     document.body.style.backgroundColor = e.target.dataset.hex;
 })
+
+// localStorage.setItem('userName', 'Andrew');
+// localStorage.getItem('userName');
+// localStorage.removeItem('userName');
+// localStorage.clear();
+// JSON.parse(), JSON.stringify();
+
+const preferences = {
+    firstName: "Andrew",
+    lastName: "Grozdanov",
+    age: 30,
+    favColor: "green"
+};
+
+localStorage.setItem('preferences', JSON.stringify(preferences));
+
+const { favColor } = JSON.parse(localStorage.preferences);
+// document.body.style.backgroundColor = favColor;
